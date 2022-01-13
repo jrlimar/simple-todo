@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="tasks-container">
+  <div id="tasks-header">
+    <h3>TODO</h3>
+    <form id="add-task-form">
+      <input type="text" id="task-title" placeholder="Adicione uma nova tarefa"></input>
+      <button type="submit" id="add-btn">
+        <ion-icon name="add-outline"></ion-icon>
+      </button>
+    </form>
+  </div>
+  <div id="tasks-list-container">
+    <h3>Listagem de tarefas do dia</h3>
+    <h4 id="task-update-data"></h4>
+    <ul id="task-list">
+      <li class="task-box template hide">
+        <span class="task-title"></span>
+        <ion-icon class="done-btn" name="checkmark-outline"></ion-icon>
+        <ion-icon class="remove-btn" name="close-outline"></ion-icon>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  <script src="js/scripts.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+
+var config = {
+      "ativarEventoExterno": true,
+      "evento": NewTaskEvent
+   }
+    Task.Load(config); 
+
+  </script>
+</body>
+</html>
